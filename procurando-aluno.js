@@ -7,8 +7,13 @@ const listadeAlunosEMedias = [alunos,medias];
 function verificarAluno(aluno){
 
     if(listadeAlunosEMedias[0].includes(aluno)){
-        const indice = listadeAlunosEMedias[0].indexOf(aluno);
-        const mediaAluno = listadeAlunosEMedias[1][indice];
+/*         const alunos= listadeAlunosEMedias[0]
+        const medias = listadeAlunosEMedias[1] */
+
+        const [alunos,medias] = listadeAlunosEMedias;
+
+        const indice = alunos.indexOf(aluno);
+        const mediaAluno = medias[indice];
         console.log(`O aluno ${aluno} está cadastrado, e sua nota é ${mediaAluno}`)
         
     }else{
